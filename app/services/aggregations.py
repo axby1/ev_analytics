@@ -1,4 +1,4 @@
-#API route  →  Service / Aggregation  →  MongoDB
+#API route  ->  Service / Aggregation  -> MongoDB
 #middle layer
 
 
