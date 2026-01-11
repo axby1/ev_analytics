@@ -3,7 +3,7 @@ from app.db import vehicle_collection
 
 def assert_condition(condition: bool, message: str):
     if not condition:
-        raise RuntimeError(f"❌ VALIDATION FAILED: {message}")
+        raise RuntimeError(f"VALIDATION FAILED: {message}")
 
 
 def check_model_year_type():
@@ -63,24 +63,24 @@ def check_vin_presence():
 
 
 def run_all_checks():
-    print("🔍 Running database integrity checks...\n")
+    print("Running database integrity checks...\n")
 
     check_model_year_type()
-    print("✔ model_year type OK")
+    print("model_year type OK")
 
     check_electric_range_type()
-    print("✔ electric_range type OK")
+    print("electric_range type OK")
 
     check_cafv_boolean()
-    print("✔ cafv_eligible boolean OK")
+    print("cafv_eligible boolean OK")
 
     check_vin_not_null()
-    print("✔ vin presence OK")
+    print("vin presence OK")
 
     check_vin_presence()
-    print("✔ vin uniqueness OK")
+    print("vin uniqueness OK")
 
-    print("\n✅ ALL CHECKS PASSED. DATABASE IS CLEAN.")
+    print("\nALL CHECKS PASSED. DATABASE IS CLEAN.")
 
 
 if __name__ == "__main__":
